@@ -1,0 +1,118 @@
+
+html {
+
+    font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+    max-width: 100%;  /* Страница адаптируется */
+    font-family: "GolosText", sans-serif;
+    background: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 76.4375rem; /* 1223px / 16 */
+    margin: 0 auto; /* Центрируем */
+}
+
+h1 {
+    color: rgb(49, 49, 49);
+    font-family: "Merriweather", sans-serif;
+    font-size: 3.75rem;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: rgb(49, 49, 49);
+    font-family: "Merriweather", sans-serif;
+    font-size: 3.38rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: rgb(31, 31, 31);
+    font-family: "Merriweather", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: calc(100vw * 16 / 1920);
+    }
+}
+
+@media (max-width: 1366px) {
+    /* Переход на резиновую ширину */
+    html {
+        font-size: calc(100vw * 16 / 1366);
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: calc(100vw * 16 / 375);
+    }
+
+    body {
+        max-width: 23.4375rem;
+    }
+
+    .container {
+        max-width: 20.9375rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        line-height: 110%;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+}
+
+
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 2.25rem;
+    background: rgb(49, 49, 49);
+    cursor: pointer;
+}
+
+.next svg {
+    transform: rotate(-180.00deg);
+}
+
+.prev:hover,
+.next:hover,
+.prev:focus-visible,
+.next:focus-visible {
+    background: rgb(251, 206, 81);
+}
+
+.prev:disabled,
+.next:disabled {
+    background: rgba(49, 49, 49, 0.2);
+}
